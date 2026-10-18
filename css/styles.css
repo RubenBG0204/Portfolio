@@ -293,3 +293,6 @@ h1,h2,h3,h4,p{margin-top:0}
 .detail-art .portfolio-window{width:67%;height:62%}
 @media(max-width:760px){.portfolio-window{width:68%;height:64%}}
 @media(max-width:420px){.portfolio-window,.detail-art .portfolio-window{width:78%}}
+
+
+.project-links .project-web-link{margin:0}
