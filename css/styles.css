@@ -296,3 +296,13 @@ h1,h2,h3,h4,p{margin-top:0}
 
 
 .project-links .project-web-link{margin:0}
+
+/* Proyecto: Pokémon MongoDB */
+.visual-pokemon{background:radial-gradient(circle at 50% 43%,#1f4a47,#143028 54%,#111a27)}
+.pokemon-window{width:62%;height:64%;display:flex;flex-direction:column;justify-content:space-between;padding:17px 20px;background:#101a25;border:1px solid rgba(45,212,191,.34);border-radius:10px;box-shadow:0 16px 40px #0009;transform:rotate(-2deg);color:#e7ecf2}
+.pokemon-window>span,.pokemon-window>small{font:8px var(--mono);letter-spacing:.09em;color:#a8b3c4}
+.pokemon-window strong{font-size:clamp(34px,4.6vw,58px);line-height:.9;letter-spacing:-.07em}
+.pokemon-window strong i{font:italic 500 .5em var(--serif);color:var(--green)}
+.detail-art .pokemon-window{width:67%;height:62%}
+@media(max-width:760px){.pokemon-window{width:68%;height:64%}}
+@media(max-width:420px){.pokemon-window,.detail-art .pokemon-window{width:78%}}

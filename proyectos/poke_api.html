@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Aplicación web con Flask, PyMongo y MongoDB Atlas que importa los 151 primeros Pokémon desde PokéAPI, con CRUD, filtros y estadísticas.">
+  <meta name="theme-color" content="#0b0f14">
+  <meta property="og:title" content="Pokémon MongoDB — Portfolio">
+  <meta property="og:description"
+    content="Proyecto de primer curso: Flask, PyMongo y MongoDB Atlas con importación desde PokéAPI, CRUD, filtros avanzados y estadísticas.">
+  <title>Pokémon MongoDB — Proyecto</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@1,500&display=swap">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <a class="wordmark" href="../index.html#inicio" aria-label="Inicio">Rubén B.</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"
+      aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal"><a href="../index.html#sobre-mi">Sobre
+        mí</a><a href="../index.html#habilidades">Habilidades</a><a href="../index.html#proyectos">Proyectos</a><a
+        href="../index.html#formacion">Formación</a></nav>
+    <a class="nav-contact" href="../index.html#contacto">Hablemos <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="contenido" class="project-detail section-wrap">
+    <a class="detail-back" href="../index.html#proyectos">← Volver a proyectos</a>
+    <section class="detail-hero" aria-labelledby="project-title">
+      <div>
+        <p class="eyebrow">PROYECTO ACADÉMICO · BACKEND</p>
+        <h1 id="project-title">Pokémon <span class="serif-line">MongoDB.</span></h1>
+        <p class="detail-lead">Aplicación web con Flask, PyMongo y MongoDB Atlas que importa los 151 primeros Pokémon
+          desde PokéAPI y permite gestionarlos, filtrarlos y consultar estadísticas.</p>
+        <div class="detail-tags"><span>Python</span><span>Flask</span><span>PyMongo</span><span>MongoDB
+            Atlas</span><span>PokéAPI</span></div>
+      </div>
+      <div class="detail-art visual-pokemon" role="img"
+        aria-label="Composición conceptual de la aplicación Pokémon con MongoDB">
+        <div class="pokemon-window"><span>POKÉDEX / MONGODB</span><strong>151<br><i>pokémon.</i></strong><small>CRUD ·
+            FILTROS · ESTADÍSTICAS</small></div>
+      </div>
+    </section>
+    <section class="detail-content" aria-label="Información del proyecto">
+      <article class="detail-copy">
+        <p class="project-type">01 / RESUMEN</p>
+        <h2>Una aplicación web sobre una base de datos NoSQL.</h2>
+        <p>Es un proyecto que realicé durante el primer año del ciclo de grado superior para trabajar con MongoDB. La
+          aplicación importa los 151 primeros Pokémon desde PokéAPI y los guarda en MongoDB Atlas.</p>
+        <p>Desde la interfaz web se pueden consultar, crear, editar y borrar, filtrarlos con consultas de MongoDB y ver
+          estadísticas calculadas con el aggregation framework. El repositorio separa la configuración, los
+          controladores, los modelos y las rutas. Se ejecuta en local y no hay demo desplegada.</p>
+        <p>En el desarrollo utilicé Claude (Anthropic) como asistente de inteligencia artificial, con el objetivo de ver
+          cómo se trabaja con IA en un proyecto real y qué tal nos desenvolvíamos juntos.</p>
+      </article>
+      <aside class="detail-sidebar">
+        <div><span>TIPO</span><strong>Aplicación web con base de datos NoSQL</strong></div>
+        <div><span>ESTADO</span><strong>Proyecto académico · sin demo pública</strong></div>
+        <div><span>BACKEND</span><strong>Python, Flask y PyMongo</strong></div>
+        <div><span>DATOS</span><strong>MongoDB Atlas y PokéAPI</strong></div>
+      </aside>
+    </section>
+    <section class="detail-content detail-content-secondary" aria-label="Tecnologías y trabajo realizado">
+      <article class="detail-copy">
+        <p class="project-type">02 / FUNCIONES EN EL REPOSITORIO</p>
+        <h2>De la importación a las estadísticas.</h2>
+        <ul class="detail-list">
+          <li><strong>Importación:</strong> un script carga los 151 primeros Pokémon desde PokéAPI en la base de datos.
+          </li>
+          <li><strong>CRUD completo:</strong> crear, consultar, editar y borrar Pokémon desde la aplicación.</li>
+          <li><strong>Filtros avanzados:</strong> consultas con MongoDB para acotar el listado.</li>
+          <li><strong>Estadísticas:</strong> resultados calculados con el aggregation framework.</li>
+          <li><strong>Detalle:</strong> vista de cada Pokémon con sus estadísticas completas.</li>
+          <li><strong>Ejecución en Windows:</strong> archivos <code>.bat</code> para importar los datos, arrancar la
+            aplicación y probar la conexión.</li>
+        </ul>
+      </article>
+      <aside class="detail-tech">
+        <p class="project-type">TECNOLOGÍAS</p>
+        <div class="tech-row"><strong>Python y Flask</strong><span>Servidor web, rutas y controladores</span></div>
+        <div class="tech-row"><strong>PyMongo y MongoDB Atlas</strong><span>Conexión, consultas y aggregation
+            framework</span></div>
+        <div class="tech-row"><strong>PokéAPI</strong><span>Origen de los datos de los 151 primeros Pokémon</span></div>
+        <div class="tech-row"><strong>Plantillas HTML y estáticos</strong><span>Interfaz de la aplicación</span></div>
+        <div class="tech-row"><strong>Claude (Anthropic)</strong><span>Asistente de IA durante el desarrollo, para
+            practicar el trabajo con inteligencia artificial</span></div>
+      </aside>
+    </section>
+    <section class="detail-content detail-content-secondary" aria-label="Cómo ejecutarlo en local">
+      <article class="detail-copy">
+        <p class="project-type">03 / EJECUCIÓN EN LOCAL</p>
+        <h2>Cómo probarlo en tu equipo.</h2>
+        <ul class="detail-list">
+          <li><strong>Entorno:</strong> crear un entorno virtual de Python e instalar las dependencias de
+            <code>requirements.txt</code>.</li>
+          <li><strong>Configuración:</strong> copiar <code>.env.example</code> como <code>.env</code> y completar
+            <code>MONGO_URI</code> con la conexión de MongoDB Atlas.</li>
+          <li><strong>Datos:</strong> ejecutar <code>scripts/import_pokemon.py</code> para importar los Pokémon.</li>
+          <li><strong>Aplicación:</strong> ejecutar <code>app.py</code> y abrir <code>http://127.0.0.1:5000</code>.
+          </li>
+        </ul>
+      </article>
+      <aside class="detail-sidebar">
+        <div><span>ENTRADA</span><strong><code>app.py</code></strong></div>
+        <div><span>IMPORTACIÓN</span><strong><code>scripts/import_pokemon.py</code></strong></div>
+        <div><span>CONFIGURACIÓN</span><strong><code>.env.example</code></strong></div>
+      </aside>
+    </section>
+    <section class="detail-resources" aria-labelledby="resources-title">
+      <div>
+        <p class="project-type">04 / ENLACES</p>
+        <h2 id="resources-title">Explora el proyecto</h2>
+        <p>El repositorio está disponible en GitHub. No hay una demo web desplegada, porque la aplicación necesita
+          Flask y una base de datos MongoDB.</p>
+      </div>
+      <div class="resource-grid">
+        <div class="project-resource is-pending"><span>WEB</span><strong>Aún no desplegada</strong><small>Se ejecuta en
+            local.</small></div><a class="project-resource project-resource-link"
+          href="https://github.com/RubenBG0204/mongo_db_pokemon" target="_blank"
+          rel="noopener noreferrer"><span>GITHUB ↗</span><strong>Ver repositorio</strong><small>Código fuente:
+            controladores, modelos, rutas, scripts y plantillas.</small></a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="wordmark" href="../index.html#inicio">Rubén B.</a>
+    <p>Portfolio de estudiante DAW · <span id="current-year">2026</span></p>
+    <nav aria-label="Enlaces del pie"><a href="../index.html#proyectos">Proyectos</a><a
+        href="../index.html#contacto">Contacto</a></nav>
+  </footer>
+  <script src="../js/main.js" defer></script>
+</body>
+
+</html>
