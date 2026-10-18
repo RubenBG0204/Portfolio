@@ -76,3 +76,45 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
     revealItems.forEach((item) => item.classList.remove('reveal'));
   }
 }
+
+const copyButton = document.querySelector('[data-copy-email]');
+const emailLink = document.querySelector('[data-email-link]');
+const copyStatus = document.querySelector('#copy-status');
+let copyTimer;
+
+const copyText = async (text) => {
+  if (navigator.clipboard && window.isSecureContext) {
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+  const field = document.createElement('textarea');
+  field.value = text;
+  field.setAttribute('readonly', '');
+  field.style.position = 'fixed';
+  field.style.opacity = '0';
+  document.body.appendChild(field);
+  field.select();
+  const ok = document.execCommand('copy');
+  field.remove();
+  if (!ok) throw new Error('copy failed');
+};
+
+copyButton?.addEventListener('click', async () => {
+  const email = emailLink?.getAttribute('href')?.replace(/^mailto:/i, '');
+  if (!email) return;
+  clearTimeout(copyTimer);
+  try {
+    await copyText(email);
+    copyButton.textContent = 'Copiado';
+    copyButton.classList.add('is-copied');
+    if (copyStatus) copyStatus.textContent = 'Correo copiado al portapapeles.';
+  } catch {
+    copyButton.textContent = 'No se pudo copiar';
+    if (copyStatus) copyStatus.textContent = 'No se pudo copiar el correo. Cópialo manualmente.';
+  }
+  copyTimer = setTimeout(() => {
+    copyButton.textContent = 'Copiar';
+    copyButton.classList.remove('is-copied');
+    if (copyStatus) copyStatus.textContent = '';
+  }, 2200);
+});
