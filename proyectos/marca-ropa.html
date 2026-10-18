@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tienda de ropa full stack con catálogo, filtros, carrito, cuentas, pedidos y panel de administración, con backend en Laravel y MySQL.">
+  <meta name="theme-color" content="#0b0f14">
+  <meta property="og:title" content="Sigilious — Portfolio">
+  <meta property="og:description" content="Tienda full stack con Laravel y MySQL: catálogo, carrito, autenticación con Sanctum, pedidos y administración de productos.">
+  <title>Sigilious — Proyecto</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@1,500&display=swap">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <a class="wordmark" href="../index.html#inicio" aria-label="Inicio">&lt;dev<span>/&gt;</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal"><a href="../index.html#sobre-mi">Sobre mí</a><a href="../index.html#habilidades">Habilidades</a><a href="../index.html#proyectos">Proyectos</a><a href="../index.html#formacion">Formación</a></nav>
+    <a class="nav-contact" href="../index.html#contacto">Hablemos <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="contenido" class="project-detail section-wrap">
+    <a class="detail-back" href="../index.html#proyectos">← Volver a proyectos</a>
+    <section class="detail-hero" aria-labelledby="project-title">
+      <div><p class="eyebrow">PROYECTO FULL STACK · EN DESARROLLO</p><h1 id="project-title">Sigi<span class="serif-line">lious.</span></h1><p class="detail-lead">Tienda de ropa con catálogo, filtros, carrito y pedidos guardados en MySQL, cuentas de usuario con Laravel Sanctum y un panel de administración protegido.</p><div class="detail-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript ES Modules</span><span>Laravel</span><span>PHP</span><span>MySQL</span></div></div>
+      <div class="detail-art visual-three" role="img" aria-label="Composición conceptual de la tienda Sigilious"><div class="fashion-window"><span>MARCA / ONLINE STORE</span><strong>WEAR<br><i>your way.</i></strong><small>COLECCIÓN · PRODUCTOS</small></div></div>
+    </section>
+    <section class="detail-content" aria-label="Información del proyecto">
+      <article class="detail-copy"><p class="project-type">01 / RESUMEN</p><h2>Una tienda multipágina con backend en Laravel.</h2><p>Sigilious nació como el proyecto de una marca de ropa creada junto a un compañero. Tenía el frontend completo (inicio, tienda, ficha de producto, carrito, checkout, perfil, registro, acceso, pedidos, contacto y administración) y lo he migrado a un proyecto Laravel con MySQL, sustituyendo el backend anterior en Supabase.</p><p>El JavaScript modular sigue gestionando la interfaz y ahora habla con una API propia: productos, cuentas, carrito, pedidos y administración se guardan en MySQL. El estado sigue siendo de desarrollo y no hay demo desplegada.</p></article>
+      <aside class="detail-sidebar"><div><span>TIPO</span><strong>Tienda web full stack</strong></div><div><span>ESTADO</span><strong>En desarrollo · sin demo pública</strong></div><div><span>BACKEND</span><strong>Laravel, PHP y MySQL</strong></div><div><span>CUENTAS</span><strong>Registro e inicio de sesión con Sanctum</strong></div></aside>
+    </section>
+    <section class="detail-content detail-content-secondary" aria-label="Tecnologías y trabajo realizado">
+      <article class="detail-copy"><p class="project-type">02 / FUNCIONES EN EL REPOSITORIO</p><h2>Del catálogo a la administración.</h2><ul class="detail-list"><li><strong>Tienda:</strong> búsqueda, categoría (con accesos directos desde la página principal), rango de precio y ordenación.</li><li><strong>Productos:</strong> ficha con tallas y cantidad; el catálogo se lee de MySQL a través de una API de Laravel.</li><li><strong>Carrito:</strong> se guarda en MySQL por usuario y reaparece al iniciar sesión desde otro navegador; sin sesión usa almacenamiento local.</li><li><strong>Cuentas:</strong> registro, inicio y cierre de sesión con tokens de Laravel Sanctum.</li><li><strong>Pedidos:</strong> se guardan en MySQL y el servidor calcula el total a partir de los precios de la base de datos, sin fiarse del cliente.</li><li><strong>Administración:</strong> alta, edición y borrado de productos, solo para usuarios con permiso de administrador mediante un middleware.</li><li><strong>Datos:</strong> migraciones y un seeder con los productos de ejemplo.</li></ul></article>
+      <aside class="detail-tech"><p class="project-type">TECNOLOGÍAS</p><div class="tech-row"><strong>HTML y CSS</strong><span>Páginas y diseño de la tienda</span></div><div class="tech-row"><strong>JavaScript ES Modules</strong><span>Catálogo, carrito, cuentas, pedidos e interfaz</span></div><div class="tech-row"><strong>Laravel y PHP</strong><span>API, controladores, Sanctum y middleware</span></div><div class="tech-row"><strong>MySQL</strong><span>Migraciones, modelos y seeder</span></div></aside>
+    </section>
+    <section class="detail-content detail-content-secondary" aria-label="Revisión técnica y siguientes mejoras"><article class="detail-copy"><p class="project-type">03 / PUNTOS A REVISAR</p><h2>Qué falta antes de publicar.</h2><ul class="detail-list"><li><strong>Checkout:</strong> valida un número de tarjeta y confirma el pedido, pero no hay pasarela de pago; no debe presentarse como compra real ni usarse para cobrar.</li><li><strong>Recuperación de contraseña:</strong> aún no está disponible, porque requiere configurar el envío de correos.</li><li><strong>Contacto y newsletter:</strong> validan campos y muestran mensajes de éxito tras una espera, pero no envían datos a ningún servicio.</li><li><strong>Tests:</strong> el proyecto no tiene todavía pruebas automáticas.</li><li><strong>Despliegue:</strong> funciona en local; falta publicarlo en un servidor.</li></ul></article><aside class="detail-sidebar"><div><span>COMPRAS</span><strong>Checkout de demostración · sin pagos reales</strong></div><div><span>CUENTAS</span><strong>Recuperación de contraseña pendiente</strong></div><div><span>FORMULARIOS</span><strong>Contacto y newsletter sin envío real</strong></div></aside></section>
+    <section class="detail-resources" aria-labelledby="resources-title"><div><p class="project-type">04 / ENLACES</p><h2 id="resources-title">Explora el proyecto</h2><p>El repositorio está disponible en GitHub. No hay una demo web desplegada.</p></div><div class="resource-grid"><div class="project-resource is-pending"><span>WEB</span><strong>Aún no desplegada</strong><small>Demo pendiente de publicar.</small></div><a class="project-resource project-resource-link" href="https://github.com/RubenBG0204/sigilious-laravel" target="_blank" rel="noopener noreferrer"><span>GITHUB ↗</span><strong>Ver repositorio</strong><small>Código fuente: controladores Laravel, migraciones, seeder y frontend.</small></a></div></section>
+  </main>
+  <footer class="site-footer"><a class="wordmark" href="../index.html#inicio">&lt;dev<span>/&gt;</span></a><p>Portfolio de estudiante DAW · <span id="current-year">2026</span></p><nav aria-label="Enlaces del pie"><a href="../index.html#proyectos">Proyectos</a><a href="../index.html#contacto">Contacto</a></nav></footer>
+  <script src="../js/main.js" defer></script>
+</body>
+</html>
