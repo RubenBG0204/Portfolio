@@ -18,6 +18,24 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@1,500&display=swap">
   <link rel="stylesheet" href="css/styles.css">
 </head>
+<script>
+  document.getElementById('cv-button').addEventListener('click', function (event) {
+    event.preventDefault();
+
+    const pdfUrl = this.href;
+
+    // Abrir el PDF en una pestaña nueva
+    window.open(pdfUrl, '_blank');
+
+    // Descargar el PDF
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'Curriculum-Ruben-Barrutia.pdf';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  });
+</script>
 
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -42,8 +60,13 @@
         <p class="hero-intro">Me interesa entender cómo funcionan las cosas y convertir problemas reales en experiencias
           digitales claras, útiles y cuidadas.</p>
         <div class="hero-actions"><a class="button button-dark" href="#proyectos">Ver mis proyectos <span
-              aria-hidden="true">↓</span></a><a class="text-link" href="#contacto">Contactar conmigo <span
-              aria-hidden="true">↗</span></a></div>
+              aria-hidden="true">↓</span></a>
+          <a class="button button-outline" href="assets/curriculum.pdf" target="_blank" rel="noopener noreferrer"
+            id="cv-button">
+            Ver currículum
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </div>
       <div class="hero-art" aria-hidden="true">
         <div class="art-top"><span>PORTFOLIO / 2026</span><span>01 — 05</span></div>
@@ -192,7 +215,8 @@
           <div class="project-visual visual-pokemon" role="img"
             aria-label="Vista conceptual de la aplicación Pokémon con MongoDB"><span class="demo-tag">ACADÉMICO · PRIMER
               CURSO</span>
-            <div class="pokemon-window"><span>POKÉDEX / MONGODB</span><strong>151<br><i>pokémon.</i></strong><small>CRUD ·
+            <div class="pokemon-window"><span>POKÉDEX / MONGODB</span><strong>151<br><i>pokémon.</i></strong><small>CRUD
+                ·
                 FILTROS · ESTADÍSTICAS</small></div><span class="project-number">03</span>
           </div>
           <div class="project-info">
@@ -204,8 +228,8 @@
             <div class="tag-list"><span>Python</span><span>Flask</span><span>PyMongo</span><span>MongoDB</span></div>
             <div class="project-links"><span>Web: aún no desplegada</span><a class="detail-button"
                 href="proyectos/poke_api.html">Ver proyecto completo ↗</a><a class="project-source-link"
-                href="https://github.com/RubenBG0204/mongo_db_pokemon" target="_blank"
-                rel="noopener noreferrer">GitHub ↗</a></div>
+                href="https://github.com/RubenBG0204/mongo_db_pokemon" target="_blank" rel="noopener noreferrer">GitHub
+                ↗</a></div>
           </div>
         </article>
       </div>
@@ -249,7 +273,8 @@
             <h2 id="contact-title">Hablemos<br><span class="serif-line">de tu proyecto.</span></h2>
             <p class="contact-copy">Busco prácticas en desarrollo web. Escríbeme por correo o conecta conmigo en
               LinkedIn y hablamos.</p>
-            <div class="contact-actions"><a class="button button-dark" href="mailto:rbarrutiagrasa@gmail.com">Escribirme un
+            <div class="contact-actions"><a class="button button-dark" href="mailto:rbarrutiagrasa@gmail.com">Escribirme
+                un
                 correo <span aria-hidden="true">↗</span></a><a class="button button-outline"
                 href="https://www.linkedin.com/in/ruben-barrutia" target="_blank" rel="noopener noreferrer">Ver LinkedIn
                 <span aria-hidden="true">↗</span></a></div>
