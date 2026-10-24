@@ -1,6 +1,8 @@
+// Referencias al botón del menú móvil y al contenedor de navegación.
 const menuButton = document.querySelector('.nav-toggle');
 const navigation = document.querySelector('.main-nav');
 
+// Abre o cierra el menú y mantiene sincronizados sus atributos de accesibilidad.
 menuButton?.addEventListener('click', () => {
   const expanded = menuButton.getAttribute('aria-expanded') === 'true';
   menuButton.setAttribute('aria-expanded', String(!expanded));
@@ -8,6 +10,7 @@ menuButton?.addEventListener('click', () => {
   navigation?.classList.toggle('open', !expanded);
 });
 
+// Cierra el menú móvil después de seleccionar cualquiera de sus enlaces.
 navigation?.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => {
     navigation.classList.remove('open');
@@ -16,6 +19,7 @@ navigation?.querySelectorAll('a').forEach((link) => {
   });
 });
 
+// Permite cerrar el menú con Escape y devuelve el foco al botón que lo abre.
 document.addEventListener('keydown', (event) => {
   if (event.key !== 'Escape' || menuButton?.getAttribute('aria-expanded') !== 'true') return;
   navigation?.classList.remove('open');
@@ -24,10 +28,12 @@ document.addEventListener('keydown', (event) => {
   menuButton.focus();
 });
 
+// Obtiene los controles de filtro, las tarjetas de proyecto y el anuncio accesible.
 const filterButtons = document.querySelectorAll('.filter-button');
 const projectCards = document.querySelectorAll('.project-card');
 const projectStatus = document.querySelector('#projects-status');
 
+// Muestra solo los proyectos de la categoría elegida y anuncia el resultado.
 filterButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const filter = button.dataset.filter;
@@ -46,19 +52,25 @@ filterButtons.forEach((button) => {
   });
 });
 
+// Actualiza automáticamente el año que aparece en el pie de página.
 const year = document.querySelector('#current-year');
 if (year) year.textContent = new Date().getFullYear();
 
+// Muestra el acceso para volver arriba una vez que se ha desplazado la página.
 const topButton = document.querySelector('.scroll-top');
 const updateTopButton = () => topButton?.classList.toggle('visible', window.scrollY > 500);
 window.addEventListener('scroll', updateTopButton, { passive: true });
 updateTopButton();
 topButton?.addEventListener('click', () => {
+  // Respeta la preferencia del sistema para reducir las animaciones.
   const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
   window.scrollTo({ top: 0, behavior });
 });
 
+// Elementos que aparecen con una transición al entrar en la zona visible.
 const revealItems = document.querySelectorAll('.section-label, .about-body, .skill-card, .project-card, .timeline-item, .contact-grid');
+// IntersectionObserver evita escuchar continuamente el desplazamiento; se omite si no está disponible
+// o si el usuario ha solicitado movimiento reducido.
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   try {
     const observer = new IntersectionObserver((entries, currentObserver) => {
@@ -77,11 +89,13 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
   }
 }
 
+// Referencias a los elementos usados para copiar el correo y comunicar el resultado.
 const copyButton = document.querySelector('[data-copy-email]');
 const emailLink = document.querySelector('[data-email-link]');
 const copyStatus = document.querySelector('#copy-status');
 let copyTimer;
 
+// Copia texto usando la API moderna y recurre a una alternativa para contextos no seguros.
 const copyText = async (text) => {
   if (navigator.clipboard && window.isSecureContext) {
     await navigator.clipboard.writeText(text);
@@ -99,6 +113,7 @@ const copyText = async (text) => {
   if (!ok) throw new Error('copy failed');
 };
 
+// Copia la dirección de correo, informa del resultado y restaura el botón tras unos segundos.
 copyButton?.addEventListener('click', async () => {
   const email = emailLink?.getAttribute('href')?.replace(/^mailto:/i, '');
   if (!email) return;

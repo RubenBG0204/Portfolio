@@ -1,5 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Fondo oscuro con esquinas redondeadas para el icono de pestaña. -->
   <rect width="64" height="64" rx="16" fill="#0b0f14"/>
+  <!-- Iniciales geométricas en celeste y turquesa que identifican la marca. -->
   <path d="M14 18h8v24h18v8H14z" fill="#38bdf8"/>
   <path d="M30 18h20v8H38v8h10v8H38v8h-8z" fill="#2dd4bf"/>
 </svg>

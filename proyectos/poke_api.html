@@ -1,7 +1,9 @@
 <!doctype html>
+<!-- Página de detalle del proyecto académico con Pokémon y MongoDB. -->
 <html lang="es">
 
 <head>
+  <!-- Metadatos para navegador y redes sociales, icono, tipografías y hoja de estilos compartida. -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
@@ -20,7 +22,9 @@
 </head>
 
 <body>
+  <!-- Enlace de accesibilidad para saltar la navegación. -->
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <!-- Navegación común del portfolio con enlaces de regreso a sus secciones principales. -->
   <header class="site-header">
     <a class="wordmark" href="../index.html#inicio" aria-label="Inicio">Rubén B.</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"
@@ -31,7 +35,9 @@
     <a class="nav-contact" href="../index.html#contacto">Hablemos <span aria-hidden="true">↗</span></a>
   </header>
   <main id="contenido" class="project-detail section-wrap">
+    <!-- Vuelve a la lista de proyectos en la página principal. -->
     <a class="detail-back" href="../index.html#proyectos">← Volver a proyectos</a>
+    <!-- Nombre, resumen, tecnologías e ilustración conceptual del proyecto. -->
     <section class="detail-hero" aria-labelledby="project-title">
       <div>
         <p class="eyebrow">PROYECTO ACADÉMICO · BACKEND</p>
@@ -47,6 +53,7 @@
             FILTROS · ESTADÍSTICAS</small></div>
       </div>
     </section>
+    <!-- Contexto, objetivos y datos clave del proyecto. -->
     <section class="detail-content" aria-label="Información del proyecto">
       <article class="detail-copy">
         <p class="project-type">01 / RESUMEN</p>
@@ -66,6 +73,7 @@
         <div><span>DATOS</span><strong>MongoDB Atlas y PokéAPI</strong></div>
       </aside>
     </section>
+    <!-- Funcionalidades del proyecto y tecnologías empleadas. -->
     <section class="detail-content detail-content-secondary" aria-label="Tecnologías y trabajo realizado">
       <article class="detail-copy">
         <p class="project-type">02 / FUNCIONES EN EL REPOSITORIO</p>
@@ -92,6 +100,7 @@
             practicar el trabajo con inteligencia artificial</span></div>
       </aside>
     </section>
+    <!-- Pasos y archivos necesarios para poner la aplicación en marcha localmente. -->
     <section class="detail-content detail-content-secondary" aria-label="Cómo ejecutarlo en local">
       <article class="detail-copy">
         <p class="project-type">03 / EJECUCIÓN EN LOCAL</p>
@@ -112,6 +121,7 @@
         <div><span>CONFIGURACIÓN</span><strong><code>.env.example</code></strong></div>
       </aside>
     </section>
+    <!-- Enlace al código fuente y estado de disponibilidad de una demo. -->
     <section class="detail-resources" aria-labelledby="resources-title">
       <div>
         <p class="project-type">04 / ENLACES</p>
@@ -128,11 +138,13 @@
       </div>
     </section>
   </main>
+  <!-- Pie compartido con enlaces de vuelta al portfolio. -->
   <footer class="site-footer"><a class="wordmark" href="../index.html#inicio">Rubén B.</a>
     <p>Portfolio de estudiante DAW · <span id="current-year">2026</span></p>
     <nav aria-label="Enlaces del pie"><a href="../index.html#proyectos">Proyectos</a><a
         href="../index.html#contacto">Contacto</a></nav>
   </footer>
+  <!-- Reutiliza las interacciones comunes del sitio, como el menú y el año. -->
   <script src="../js/main.js" defer></script>
 </body>
 
