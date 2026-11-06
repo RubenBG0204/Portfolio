@@ -208,6 +208,7 @@ textarea:focus-visible {
 .projects-heading>p,
 .education-intro,
 .timeline-item p,
+.experience-list,
 .project-info>p {
     color: var(--muted)
 }
@@ -684,6 +685,7 @@ p {
 .skills h2,
 .projects h2,
 .education h2,
+.experience h2,
 .contact h2 {
     font-size: clamp(44px, 5.6vw, 72px);
     line-height: 1.05;
@@ -1004,7 +1006,8 @@ p {
     padding-top: 54px
 }
 
-.education h2 {
+.education h2,
+.experience h2 {
     font-size: clamp(42px, 4.8vw, 64px)
 }
 
@@ -1486,7 +1489,8 @@ p {
         width: 68%
     }
 
-    .education h2 {
+    .education h2,
+    .experience h2 {
         font-size: 47px
     }
 
@@ -2160,4 +2164,47 @@ p {
     .detail-art .pokemon-window {
         width: 78%
     }
+}
+
+
+/* Sección de experiencia laboral: reutiliza la línea temporal de formación. */
+.experience {
+    background: var(--paper);
+    border-top: 1px solid var(--line)
+}
+
+.experience-link {
+    color: var(--green);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(45, 212, 191, .4)
+}
+
+.experience-link:hover,
+.experience-link:focus-visible {
+    color: var(--sky);
+    border-color: var(--sky)
+}
+
+.experience-list {
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+    font-size: 11px;
+    line-height: 1.7
+}
+
+.experience-list li {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 6px
+}
+
+.experience-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .75em;
+    width: 6px;
+    height: 1px;
+    background: var(--sky)
 }
